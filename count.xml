@@ -27,51 +27,70 @@
               </block>
             </value>
             <statement name="DO">
-              <block type="oled_setcursor" id="68" inline="true">
+              <block type="oled_setcursor" id="159" inline="true">
                 <value name="STARTX">
-                  <block type="math_number" id="75">
+                  <block type="math_number" id="160">
                     <field name="NUM">20</field>
                   </block>
                 </value>
                 <value name="STARTY">
-                  <block type="math_number" id="82">
-                    <field name="NUM">20</field>
+                  <block type="math_number" id="161">
+                    <field name="NUM">50</field>
                   </block>
                 </value>
                 <next>
-                  <block type="oled_drawnumber" id="108" inline="true">
-                    <value name="NUMBER">
-                      <block type="variables_get" id="115">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
+                  <block type="oled_drawtext" id="170">
+                    <field name="TEXT">THE COUNT IS</field>
                     <next>
-                      <block type="robot_delay" id="59" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="45">
-                            <field name="NUM">3000</field>
+                      <block type="oled_setcursor" id="68" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="75">
+                            <field name="NUM">85</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="82">
+                            <field name="NUM">20</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_cleardisplay" id="125">
-                            <next>
-                              <block type="variables_set" id="148" inline="true">
+                          <block type="oled_drawnumber" id="108" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="115">
                                 <field name="VAR">count</field>
-                                <value name="VALUE">
-                                  <block type="math_arithmetic" id="38" inline="true">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <block type="variables_get" id="57">
-                                        <field name="VAR">count</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <block type="math_number" id="52">
-                                        <field name="NUM">1</field>
-                                      </block>
-                                    </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="robot_delay" id="59" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="45">
+                                    <field name="NUM">3000</field>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="oled_cleardisplay" id="125">
+                                    <next>
+                                      <block type="variables_set" id="148" inline="true">
+                                        <field name="VAR">count</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="38" inline="true">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="57">
+                                                <field name="VAR">count</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="52">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
