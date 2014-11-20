@@ -1,1 +1,90 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="oled_cleardisplay" id="9" x="16" y="12">
+    <next>
+      <block type="variables_set" id="21" inline="true">
+        <field name="VAR">count</field>
+        <value name="VALUE">
+          <block type="math_number" id="28">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="15" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="135" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="140">
+                    <field name="VAR">count</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="147">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="oled_setcursor" id="68" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="75">
+                    <field name="NUM">20</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="82">
+                    <field name="NUM">20</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_drawnumber" id="108" inline="true">
+                    <value name="NUMBER">
+                      <block type="variables_get" id="115">
+                        <field name="VAR">count</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="robot_delay" id="59" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="45">
+                            <field name="NUM">3000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_cleardisplay" id="125">
+                            <next>
+                              <block type="variables_set" id="148" inline="true">
+                                <field name="VAR">count</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="38" inline="true">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="57">
+                                        <field name="VAR">count</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="52">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
