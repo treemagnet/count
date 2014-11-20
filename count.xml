@@ -135,13 +135,6 @@
                                 <field name="VAR">count</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="oled_drawnumber" id="247" inline="true">
-                                <value name="NUMBER">
-                                  <block type="sensor_battery" id="350"></block>
-                                </value>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
