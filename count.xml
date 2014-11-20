@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="9" x="-140" y="-74">
+  <block type="oled_cleardisplay" id="9" x="-386" y="-916">
     <next>
       <block type="variables_set" id="21" inline="true">
         <field name="VAR">count</field>
@@ -21,7 +21,7 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="147">
-                    <field name="NUM">10</field>
+                    <field name="NUM">3</field>
                   </block>
                 </value>
               </block>
@@ -135,6 +135,13 @@
                                 <field name="VAR">count</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="oled_drawnumber" id="247" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_battery" id="350"></block>
+                                </value>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
